@@ -21,7 +21,6 @@ public class Main extends JavaPlugin{
 		getCommand("xpshop").setExecutor(new XPShopCommand());
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 		pm.registerEvents(new MainMenuHandler(), this);
-		//swek
 	}
 	
 	@Override

@@ -30,7 +30,6 @@ public class MainMenuHandler implements Listener{
 			break;
 		case BARRIER:
 			player.closeInventory();
-			//swek
 			break;
 		default:
 			player.closeInventory();
