@@ -6,15 +6,15 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-import me.trusthage.menus.buy.BuyMenu;
+import me.trusthage.menus.buy.building.BuildingP1;
 
-public class MainMenuHandler implements Listener{
-
-	BuyMenu buymenu = new BuyMenu();
+public class BuyMenuHandler implements Listener{
+	
+	BuildingP1 building = new BuildingP1();
 	
 	@EventHandler
-	public void onMainMenuClick(InventoryClickEvent e){
-		if(!e.getInventory().getName().equalsIgnoreCase("Xp Shop")) return;
+	public void onBuyMenuClick(InventoryClickEvent e){
+		if(!e.getInventory().getName().equalsIgnoreCase("Buy Menu")) return;
 		
 		Player player = (Player)e.getWhoClicked();
 		e.setCancelled(true);
@@ -24,21 +24,13 @@ public class MainMenuHandler implements Listener{
 			return;
 		}
 		
-		switch(e.getCurrentItem().getType())
-		{
-		case DIAMOND:
-			buymenu.openBuyMenu(player.getPlayer());
-			break;
-		case EXP_BOTTLE:
-			//openSellMenu(player.getPlayer());
-			break;
-		case BARRIER:
-			player.closeInventory();
+		switch(e.getCurrentItem().getType()){
+		case BRICK:
+			building.openBuildMenuP1(player.getPlayer());
 			break;
 		default:
 			player.closeInventory();
-			break;
 		}
 	}
-	
+
 }

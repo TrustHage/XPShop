@@ -3,6 +3,7 @@ package me.trusthage.commands;
 import java.util.ArrayList;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -11,8 +12,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import net.md_5.bungee.api.ChatColor;
 public class XPShopCommand implements CommandExecutor{
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
@@ -33,7 +32,7 @@ public class XPShopCommand implements CommandExecutor{
 		ArrayList<String> buyLore = new ArrayList<String>();
 		ArrayList<String> sellLore = new ArrayList<String>();
 		
-		Inventory mainmenu = Bukkit.createInventory(null, 18, ChatColor.AQUA + "Xp Shop");
+		Inventory mainmenu = Bukkit.createInventory(null, 36, "Xp Shop");
 		
 		ItemStack buy = new ItemStack(Material.DIAMOND);
 		ItemMeta buyMeta = buy.getItemMeta();
@@ -55,9 +54,9 @@ public class XPShopCommand implements CommandExecutor{
 		quitMeta.setDisplayName("Quit");
 		quit.setItemMeta(quitMeta);
 		
-		mainmenu.setItem(3, buy);
-		mainmenu.setItem(5, sell);
-		mainmenu.setItem(12, quit);
+		mainmenu.setItem(12, buy);
+		mainmenu.setItem(14, sell);
+		mainmenu.setItem(31, quit);
 		
 		player.openInventory(mainmenu);
 	}

@@ -7,6 +7,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.trusthage.commands.XPShopCommand;
+import me.trusthage.handlers.BuyMenuHandler;
 import me.trusthage.handlers.MainMenuHandler;
 
 public class Main extends JavaPlugin{
@@ -21,6 +22,7 @@ public class Main extends JavaPlugin{
 		getCommand("xpshop").setExecutor(new XPShopCommand());
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 		pm.registerEvents(new MainMenuHandler(), this);
+		pm.registerEvents(new BuyMenuHandler(), this);
 	}
 	
 	@Override

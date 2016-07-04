@@ -1,0 +1,245 @@
+package me.trusthage.menus.buy.building;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+public class BuildingP1 {
+
+	public void openBuildMenuP1(Player player){
+		
+		Inventory buildingp1 = Bukkit.createInventory(null, 54, "Building Blocks          Page: 1");
+		
+		/*
+		ItemStack  = new ItemStack(Material.);
+		ItemMeta Meta = .getItemMeta();
+		
+		Meta.setDisplayName("");
+		.setItemMeta(Meta);
+		
+		menu.setItem(, );
+		*/
+		
+		ItemStack stone = new ItemStack(Material.STONE);
+		ItemMeta stoneMeta = stone.getItemMeta();
+		ItemStack granite = new ItemStack(Material.STONE, 1, (short)1);
+		ItemMeta graniteMeta = granite.getItemMeta();
+		ItemStack pgranite = new ItemStack(Material.STONE, 1, (short)2);
+		ItemMeta pgraniteMeta = pgranite.getItemMeta();
+		ItemStack diorite = new ItemStack(Material.STONE, 1, (short)3);
+		ItemMeta dioriteMeta = diorite.getItemMeta();
+		ItemStack pdiorite = new ItemStack(Material.STONE, 1, (short)4);
+		ItemMeta pdioriteMeta = pdiorite.getItemMeta();
+		ItemStack andesite = new ItemStack(Material.STONE, 1, (short)5);
+		ItemMeta andesiteMeta = andesite.getItemMeta();
+		ItemStack pandesite = new ItemStack(Material.STONE, 1, (short)6);
+		ItemMeta pandesiteMeta = pandesite.getItemMeta();
+		ItemStack grass = new ItemStack(Material.GRASS);
+		ItemMeta grassMeta = grass.getItemMeta();
+		ItemStack dirt = new ItemStack(Material.DIRT);
+		ItemMeta dirtMeta = dirt.getItemMeta();
+		ItemStack cdirt = new ItemStack(Material.DIRT, 1, (short)1);
+		ItemMeta cdirtMeta = cdirt.getItemMeta();
+		ItemStack podzol = new ItemStack(Material.DIRT, 1, (short)2);
+		ItemMeta podzolMeta = podzol.getItemMeta();
+		ItemStack cstone = new ItemStack(Material.COBBLESTONE);
+		ItemMeta cstoneMeta = cstone.getItemMeta();
+		ItemStack oakplanks = new ItemStack(Material.WOOD);
+		ItemMeta oakplanksMeta = oakplanks.getItemMeta();
+		ItemStack spruceplanks = new ItemStack(Material.WOOD, 1, (short)1);
+		ItemMeta spruceplanksMeta = spruceplanks.getItemMeta();
+		ItemStack birchplanks = new ItemStack(Material.WOOD, 1, (short)2);
+		ItemMeta birchplanksMeta = birchplanks.getItemMeta();
+		ItemStack jungleplanks = new ItemStack(Material.WOOD, 1, (short)3);
+		ItemMeta jungleplanksMeta = jungleplanks.getItemMeta();
+		ItemStack acaciaplanks = new ItemStack(Material.WOOD, 1, (short)4);
+		ItemMeta acaciaplanksMeta = acaciaplanks.getItemMeta();
+		ItemStack doakplanks = new ItemStack(Material.WOOD, 1, (short)5);
+		ItemMeta doakplanksMeta = doakplanks.getItemMeta();
+		ItemStack sand = new ItemStack(Material.SAND);
+		ItemMeta sandMeta = sand.getItemMeta();
+		ItemStack rsand = new ItemStack(Material.SAND, 1, (short)1);
+		ItemMeta rsandMeta = rsand.getItemMeta();
+		ItemStack gravel = new ItemStack(Material.GRAVEL);
+		ItemMeta gravelMeta = gravel.getItemMeta();
+		ItemStack goldore = new ItemStack(Material.GOLD_ORE);
+		ItemMeta goldoreMeta = goldore.getItemMeta();
+		ItemStack ironore = new ItemStack(Material.IRON_ORE);
+		ItemMeta ironoreMeta = ironore.getItemMeta();
+		ItemStack coalore = new ItemStack(Material.COAL_ORE);
+		ItemMeta coaloreMeta = coalore.getItemMeta();
+		ItemStack oaklog = new ItemStack(Material.LOG);
+		ItemMeta oaklogMeta = oaklog.getItemMeta();
+		ItemStack sprucelog = new ItemStack(Material.LOG, 1, (short)1);
+		ItemMeta sprucelogMeta = sprucelog.getItemMeta();
+		ItemStack birchlog = new ItemStack(Material.LOG, 1, (short)2);
+		ItemMeta birchlogMeta = birchlog.getItemMeta();
+		ItemStack junglelog = new ItemStack(Material.LOG, 1, (short)3);
+		ItemMeta junglelogMeta = junglelog.getItemMeta();
+		ItemStack sponge = new ItemStack(Material.SPONGE);
+		ItemMeta spongeMeta = sponge.getItemMeta();
+		ItemStack wsponge = new ItemStack(Material.SPONGE, 1, (short)1);
+		ItemMeta wspongeMeta = wsponge.getItemMeta();
+		ItemStack glass = new ItemStack(Material.GLASS);
+		ItemMeta glassMeta = glass.getItemMeta();
+		ItemStack lapisore = new ItemStack(Material.LAPIS_ORE);
+		ItemMeta lapisoreMeta = lapisore.getItemMeta();
+		ItemStack lapisblock = new ItemStack(Material.LAPIS_BLOCK);
+		ItemMeta lapisblockMeta = lapisblock.getItemMeta();
+		ItemStack sandstone = new ItemStack(Material.SANDSTONE);
+		ItemMeta sandstoneMeta = sandstone.getItemMeta();
+		ItemStack csandstone = new ItemStack(Material.SANDSTONE, 1, (short)1);
+		ItemMeta csandstoneMeta = csandstone.getItemMeta();
+		ItemStack ssandstone = new ItemStack(Material.SANDSTONE, 1, (short)2);
+		ItemMeta ssandstoneMeta = ssandstone.getItemMeta();
+		ItemStack quit = new ItemStack(Material.BARRIER);
+		ItemMeta quitMeta = quit.getItemMeta();
+		ItemStack wall = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)14);
+		ItemMeta wallMeta = wall.getItemMeta();
+		ItemStack back = new ItemStack(Material.NETHER_STAR);
+		ItemMeta backMeta = back.getItemMeta();
+		ItemStack next = new ItemStack(Material.NETHER_STAR);
+		ItemMeta nextMeta = next.getItemMeta();
+		
+		stoneMeta.setDisplayName("Stone x16");
+		stone.setItemMeta(stoneMeta);
+		graniteMeta.setDisplayName("Granite x16");
+		granite.setItemMeta(graniteMeta);
+		pgraniteMeta.setDisplayName("Polished Granite x16");
+		pgranite.setItemMeta(pgraniteMeta);
+		dioriteMeta.setDisplayName("Diorite x16");
+		diorite.setItemMeta(dioriteMeta);
+		pdioriteMeta.setDisplayName("Polished Diorite x16");
+		pdiorite.setItemMeta(pdioriteMeta);
+		andesiteMeta.setDisplayName("Andesite x16");
+		andesite.setItemMeta(andesiteMeta);
+		pandesiteMeta.setDisplayName("Polished Andesite x16");
+		pandesite.setItemMeta(pandesiteMeta);
+		grassMeta.setDisplayName("Grass Block x16");
+		grass.setItemMeta(grassMeta);
+		dirtMeta.setDisplayName("Dirt x16");
+		dirt.setItemMeta(dirtMeta);
+		cdirtMeta.setDisplayName("Coarse Dirt x16");
+		cdirt.setItemMeta(cdirtMeta);
+		podzolMeta.setDisplayName("Podzol x16");
+		podzol.setItemMeta(podzolMeta);
+		cstoneMeta.setDisplayName("Cobblestone x16");
+		cstone.setItemMeta(cstoneMeta);
+		oakplanksMeta.setDisplayName("Oak Wood Planks x16");
+		oakplanks.setItemMeta(oakplanksMeta);
+		spruceplanksMeta.setDisplayName("Spruce Wood Planks x16");
+		spruceplanks.setItemMeta(spruceplanksMeta);
+		birchplanksMeta.setDisplayName("Birch Wood Planks x16");
+		birchplanks.setItemMeta(birchplanksMeta);
+		jungleplanksMeta.setDisplayName("Jungle Wood Planks x16");
+		jungleplanks.setItemMeta(jungleplanksMeta);
+		acaciaplanksMeta.setDisplayName("Acacia Wood Planks x16");
+		acaciaplanks.setItemMeta(acaciaplanksMeta);
+		doakplanksMeta.setDisplayName("Dark Oak Wood Planks x16");
+		doakplanks.setItemMeta(doakplanksMeta);
+		sandMeta.setDisplayName("Sand x16");
+		sand.setItemMeta(sandMeta);
+		rsandMeta.setDisplayName("Red Sand x16");
+		rsand.setItemMeta(rsandMeta);
+		gravelMeta.setDisplayName("Gravel x16");
+		gravel.setItemMeta(gravelMeta);
+		goldoreMeta.setDisplayName("Gold Ore x16");
+		goldore.setItemMeta(goldoreMeta);
+		ironoreMeta.setDisplayName("Iron Ore x16");
+		ironore.setItemMeta(ironoreMeta);
+		coaloreMeta.setDisplayName("Coal Ore x16");
+		coalore.setItemMeta(coaloreMeta);
+		oaklogMeta.setDisplayName("Oak Wood x16");
+		oaklog.setItemMeta(oaklogMeta);
+		sprucelogMeta.setDisplayName("Spruce Wood x16");
+		sprucelog.setItemMeta(sprucelogMeta);
+		birchlogMeta.setDisplayName("Birch Wood x16");
+		birchlog.setItemMeta(birchlogMeta);
+		junglelogMeta.setDisplayName("Jungle Wood x16");
+		junglelog.setItemMeta(junglelogMeta);
+		spongeMeta.setDisplayName("Sponge x16");
+		sponge.setItemMeta(spongeMeta);
+		wspongeMeta.setDisplayName("Wet Sponge x16");
+		wsponge.setItemMeta(wspongeMeta);
+		glassMeta.setDisplayName("Glass x16");
+		glass.setItemMeta(glassMeta);
+		lapisoreMeta.setDisplayName("Lapis Lazuli Ore x16");
+		lapisore.setItemMeta(lapisoreMeta);
+		lapisblockMeta.setDisplayName("Lapis Lazuli Block x16");
+		lapisblock.setItemMeta(lapisblockMeta);
+		sandstoneMeta.setDisplayName("Sandstone x16");
+		sandstone.setItemMeta(sandstoneMeta);
+		csandstoneMeta.setDisplayName("Chiseled Sandstone x16");
+		csandstone.setItemMeta(csandstoneMeta);
+		ssandstoneMeta.setDisplayName("Smooth Sandstone x16");
+		ssandstone.setItemMeta(ssandstoneMeta);
+		quitMeta.setDisplayName("Quit");
+		quit.setItemMeta(quitMeta);
+		wallMeta.setDisplayName("-");
+		wall.setItemMeta(wallMeta);
+		backMeta.setDisplayName("Back");
+		back.setItemMeta(backMeta);
+		nextMeta.setDisplayName("Next Page");
+		next.setItemMeta(nextMeta);
+		
+		buildingp1.setItem(0, stone);
+		buildingp1.setItem(1, granite);
+		buildingp1.setItem(2, pgranite);
+		buildingp1.setItem(3, diorite);
+		buildingp1.setItem(4, pdiorite);
+		buildingp1.setItem(5, andesite);
+		buildingp1.setItem(6, pandesite);
+		buildingp1.setItem(7, grass);
+		buildingp1.setItem(8, dirt);
+		
+		buildingp1.setItem(9, cdirt);
+		buildingp1.setItem(10, podzol);
+		buildingp1.setItem(11, cstone);
+		buildingp1.setItem(12, oakplanks);
+		buildingp1.setItem(13, spruceplanks);
+		buildingp1.setItem(14, birchplanks);
+		buildingp1.setItem(15, jungleplanks);
+		buildingp1.setItem(16, acaciaplanks);
+		buildingp1.setItem(17, doakplanks);
+		
+		buildingp1.setItem(18, sand);
+		buildingp1.setItem(19, rsand);
+		buildingp1.setItem(20, gravel);
+		buildingp1.setItem(21, goldore);
+		buildingp1.setItem(22, ironore);
+		buildingp1.setItem(23, coalore);
+		buildingp1.setItem(24, oaklog);
+		buildingp1.setItem(25, sprucelog);
+		buildingp1.setItem(26, birchlog);
+		
+		buildingp1.setItem(27, junglelog);
+		buildingp1.setItem(28, sponge);
+		buildingp1.setItem(29, wsponge);
+		buildingp1.setItem(30, glass);
+		buildingp1.setItem(31, lapisore);
+		buildingp1.setItem(32, lapisblock);
+		buildingp1.setItem(33, sandstone);
+		buildingp1.setItem(34, csandstone);
+		buildingp1.setItem(35, ssandstone);
+		
+		buildingp1.setItem(36, wall);
+		buildingp1.setItem(37, wall);
+		buildingp1.setItem(38, wall);
+		buildingp1.setItem(39, wall);
+		buildingp1.setItem(40, wall);
+		buildingp1.setItem(41, wall);
+		buildingp1.setItem(42, wall);
+		buildingp1.setItem(43, wall);
+		buildingp1.setItem(44, wall);
+		
+		buildingp1.setItem(45, back);
+		buildingp1.setItem(49, quit);
+		buildingp1.setItem(53, next);
+		
+		player.openInventory(buildingp1);
+	}
+	
+}
